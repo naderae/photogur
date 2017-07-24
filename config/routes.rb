@@ -1,3 +1,17 @@
 Rails.application.routes.draw do
-  get 'pictures' => 'pictures#index' #take this 'get' request to the 'pictures' controller  'index' action     
+  root 'pictures#index'
+  get 'pictures' => 'pictures#index'
+
+  get 'pictures' => 'pictures#index'
+
+  get 'pictures/:id/edit' => "pictures#edit"
+  patch 'pictures/:id' => "pictures#update"
+
+  post 'pictures' => 'pictures#create'
+  get 'pictures/new' => 'pictures#new'
+
+  delete 'pictures/:id' => 'pictures#destroy'
+
+  get 'pictures/:id' => 'pictures#show'
+
 end
