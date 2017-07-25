@@ -10,4 +10,10 @@ class Picture < ApplicationRecord
     Picture.where("created_at > ? and created_at < ?", start_date, end_date)
   end
 
+  validates :artist, presence: true
+  validates :title, length: {minimum: 3, maximum: 20}
+  validates :url, presence:true, uniqueness: true
+
+
+
 end

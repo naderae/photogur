@@ -4,7 +4,7 @@ class PicturesController < ApplicationController
     @pictures = Picture.all
     @older_pictures = Picture.older_pictures
     @pictures_in_2017 = Picture.pictures_created_in_year(2017)
-    # @pictures_in_2016 = Picture.pictures_created_in_year(2016)
+    @pictures_in_2016 = Picture.pictures_created_in_year(2016)
     # @pictures_in_2015 = Picture.pictures_created_in_year(2015)
 
   end
